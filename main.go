@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"os"
+	"regexp"
+	"strings"
 )
 
 const (
-	ChunkSize   = 20
-	OverlapSize = 5
+	ChunkSize   = 80
+	OverlapSize = 10
 )
 
 func main() {
@@ -19,6 +21,8 @@ func main() {
 
 	text := string(content)
 	chunks := chunk(text)
+	chunks = filterLower(chunks)
+	chunks = filterAlphaNumeric(chunks)
 
 	for _, c := range chunks {
 		fmt.Println(c)
@@ -26,10 +30,28 @@ func main() {
 
 }
 
+func filterAlphaNumeric(chunks []string) []string {
+	re := regexp.MustCompile(`[^a-zA-z0-9 ]`)
+	var filteredChunks []string
+	for _, chunk := range chunks {
+		filteredChunks = append(filteredChunks, re.ReplaceAllString(chunk, ""))
+	}
+	return filteredChunks
+}
+
+func filterLower(chunks []string) []string {
+	var filteredChunks []string
+	for _, chunk := range chunks {
+		filteredChunks = append(filteredChunks, strings.ToLower(chunk))
+	}
+	return filteredChunks
+}
+
 func chunk(inputText string) []string {
 	var chunks []string
 	var buffer []rune
 	var overlapBuffer []rune
+
 	overlapBufferLength := 0
 	bufferLength := 0
 
