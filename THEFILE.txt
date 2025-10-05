@@ -1,0 +1,49 @@
+The corpus callosum (Latin for "tough body"), also callosal commissure, is a wide, thick nerve tract, consisting of a flat bundle of commissural fibers, beneath the cerebral cortex in the brain. The corpus callosum is only found in placental mammals.[1] It spans part of the longitudinal fissure, connecting the left and right cerebral hemispheres, enabling communication between them. It is the largest white matter structure in the human brain, about 10 cm (3.9 in) in length and consisting of 200–300 million axonal projections.[2][3]
+
+A number of separate nerve tracts, classed as subregions of the corpus callosum, connect different parts of the hemispheres. The main ones are known as the genu, the rostrum, the trunk or body, and the splenium.[4]
+
+Structure
+
+MRI of corpus callosum and its named parts
+
+Corpus callosum
+The corpus callosum forms the floor of the longitudinal fissure that separates the two cerebral hemispheres. Part of the corpus callosum forms the roof of the lateral ventricles.[5]
+
+The corpus callosum has four main parts – individual nerve tracts that connect different parts of the hemispheres. These are the rostrum, the genu, the trunk or body, and the splenium.[4] Fibres from the trunk and the splenium, known together as the tapetum ("carpet"), form the roof of each lateral ventricle.[6]
+
+The front part of the corpus callosum, towards the frontal lobes, is called the genu ("knee"). The genu curves downward and backward in front of the septum pellucidum, diminishing greatly in thickness. The lower, much thinner part is the rostrum and is connected below with the lamina terminalis, which stretches from the interventricular foramina to the recess at the base of the optic stalk. The rostrum is named for its resemblance to a bird's beak.
+
+The end part of the corpus callosum, towards the cerebellum, is called the splenium. This is the thickest part, and overlaps the tela choroidea of the third ventricle and the midbrain, and ends in a thick, convex, free border. Splenium translates as "bandage" in Greek.
+
+The trunk of the corpus callosum lies between the splenium and the genu.
+
+The callosal sulcus is a sulcus that separates the corpus callosum from the cingulate gyrus.
+
+Relations
+On either side of the corpus callosum, the fibers radiate in the white matter and pass to the various parts of the cerebral cortex; those curving forward from the genu into the frontal lobes constitute the forceps minor (also forceps anterior) and those curving backward from the splenium into the occipital lobes, the forceps major (also forceps posterior).[4] Between these two parts is the main body of the fibers, which constitute the tapetum and extend laterally on either side into the temporal lobe, and cover in the central part of the lateral ventricle. The tapetum and anterior commissure share the function of connecting left and right temporal lobes.
+
+The anterior cerebral arteries are in contact with the undersurface of the rostrum; they arch over the front of the genu and are carried along the trunk, supplying the front four-fifths of the corpus callosum.[7]
+
+Neuronal fibers
+
+The size, amount of myelination, and density of the fibers in the subregions relate to the functions of the brain regions they connect.[8] Myelination is the process of coating neurons with myelin, which helps the transfer of information between neurons. The process is believed to occur until an individual's thirties with peak growth in the first decade of one's life.[9] Thinner, lightly myelinated fibers are slower conducting and they connect the association and prefrontal areas. Thicker and fast-conducting fibers connect the visual and motor areas.[10]
+
+The tractogram pictured shows the nerve tracts from six segments of the corpus callosum, providing linking of the cortical regions between the cerebral hemispheres. Those of the genu are shown in coral; of the premotor, green; of the sensory-motor, purple; of the parietal, pink; of the temporal, yellow; and of the splenium, blue.[11]
+
+Thinner axons in the genu connect the prefrontal cortex between the two halves of the brain; these fibers arise from a fork-like bundle of fibers from the tapetum, the forceps minor. Thicker axons in the trunk of the corpus callosum interconnect areas of the motor cortex, with proportionately more of the corpus callosum dedicated to supplementary motor regions including Broca's area. The splenium communicates somatosensory information between the two halves of the parietal lobe and the visual cortex at the occipital lobe. These are the fibers of the forceps major.[12][13]
+
+A study of five- to eighteen-year-olds found a positive correlation between age and callosal thickness.[3]
+
+Variation between sexes
+The corpus callosum and its relation to sex has been a subject of debate in the scientific and lay communities for over a century. Initial research in the early 20th century claimed the corpus to be different in size between men and women. That research was, in turn, questioned, and ultimately gave way to more advanced imaging techniques that appeared to refute earlier correlations. However, advanced analytical techniques of computational neuroanatomy developed in the 1990s showed that sex differences were clear, but confined to certain parts of the corpus callosum, and that they correlated with cognitive performance in certain tests.[14] An MRI study found that the midsagittal corpus callosum cross-sectional area is, after controlling for brain size, on average, proportionately larger in females.[15]
+
+Using diffusion tensor sequences on MRI machines, the rate at which molecules diffuse in and out of a specific area of tissue, anisotropy can be measured and used as an indirect measurement of anatomical connection strength. These sequences have found consistent sex differences in human corpus callosal shape and microstructure: specifically, increased signal intensity and decreased fractional anisotropy in the female corpus callosum, as compared with that of the male. [16][17][18]
+
+Analysis by shape and size has also been used to study specific three-dimensional mathematical relationships with MRIs, and have found consistent and statistically significant differences between sexes.[19][20] Specific algorithms have found significant differences between the two sexes in over 70% of cases in one review.[21]
+
+A 2005 study on the sizes and structures of the corpus callosum in transgender people found it to be structurally more in line with their declared gender than their assigned sex. [21]
+
+Correlates of size with handedness
+One study reported that the front portion of the human corpus callosum was 0.75 cm2 or 11% larger in left-handed and ambidextrous people than right-handed people.[22][23] This difference was evident in the anterior and posterior regions of the corpus callosum, but not in the splenium.[22] However, a 2022 meta-analysis failed to confirm any substantial differences in the corpus callosum related to left vs. right- vs. mix-handedness.[24] Others have instead suggested that the degree of handedness negatively correlates with the size of the corpus callosum, meaning that individuals who are capable of using both hands with dexterity would have the largest corpus callosum and vice versa for either left or right hand.[25]
+
+Development
