@@ -8,8 +8,8 @@ import (
 )
 
 const (
-	ChunkSize   = 80
-	OverlapSize = 10
+	ChunkSize   = 10
+	OverlapSize = 3
 )
 
 func main() {
@@ -20,7 +20,9 @@ func main() {
 	}
 
 	text := string(content)
-	chunks := chunk(text)
+	// chunks := chunkTextOnSize(text)
+	chunks := chunkTextOnDelimiter(text, " ")
+
 	chunks = filterLower(chunks)
 	chunks = filterAlphaNumeric(chunks)
 
@@ -47,7 +49,36 @@ func filterLower(chunks []string) []string {
 	return filteredChunks
 }
 
-func chunk(inputText string) []string {
+func chunkTextOnDelimiter(inputText string, delimiter string) []string {
+	re := regexp.MustCompile(delimiter)
+	chunks := re.Split(inputText, -1)
+	var buffer []string
+
+	startIndex := 0
+	step := ChunkSize - OverlapSize
+	endIndex := startIndex + OverlapSize
+
+	for {
+		buffer = append(buffer, strings.Join(chunks[startIndex:endIndex], delimiter))
+		startIndex += step
+		if startIndex > len(chunks) {
+			break
+		}
+
+		if endIndex == len(chunks) {
+			break
+		}
+
+		endIndex = startIndex + ChunkSize
+		if endIndex > len(chunks) {
+			endIndex = len(chunks)
+		}
+
+	}
+	return buffer
+}
+
+func chunkTextOnSize(inputText string) []string {
 	var chunks []string
 	var buffer []rune
 	var overlapBuffer []rune
