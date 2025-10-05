@@ -1,34 +1,36 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 	"regexp"
 	"strings"
 )
 
-const (
-	ChunkSize   = 10
-	OverlapSize = 3
-)
-
 func main() {
+	size := flag.Int("size", 50, "Size of the chunk")
+	overlap := flag.Int("overlap", 10, "Overlap between chunks")
 
-	content, err := os.ReadFile("THEFILE.txt")
+	flag.Parse()
+	fileName := flag.Args()[0]
+	// strange: in go you have to place the flags before the ARGs,
+	// -> ./main --size=5 --overlap=1 THEFILE.txt
+
+	content, err := os.ReadFile(fileName)
 	if err != nil {
 		panic("Error loading file")
 	}
 
 	text := string(content)
-	// chunks := chunkTextOnSize(text)
-	chunks := chunkTextOnDelimiter(text, " ")
-
+	chunks := chunkTextOnDelimiter(text, " ", *size, *overlap)
 	chunks = filterLower(chunks)
 	chunks = filterAlphaNumeric(chunks)
 
 	for _, c := range chunks {
 		fmt.Println(c)
 	}
+	fmt.Println(*size, *overlap)
 
 }
 
@@ -49,14 +51,14 @@ func filterLower(chunks []string) []string {
 	return filteredChunks
 }
 
-func chunkTextOnDelimiter(inputText string, delimiter string) []string {
+func chunkTextOnDelimiter(inputText string, delimiter string, size int, overlap int) []string {
 	re := regexp.MustCompile(delimiter)
 	chunks := re.Split(inputText, -1)
 	var buffer []string
 
 	startIndex := 0
-	step := ChunkSize - OverlapSize
-	endIndex := startIndex + OverlapSize
+	step := size - overlap
+	endIndex := startIndex + overlap
 
 	for {
 		buffer = append(buffer, strings.Join(chunks[startIndex:endIndex], delimiter))
@@ -69,7 +71,7 @@ func chunkTextOnDelimiter(inputText string, delimiter string) []string {
 			break
 		}
 
-		endIndex = startIndex + ChunkSize
+		endIndex = startIndex + size
 		if endIndex > len(chunks) {
 			endIndex = len(chunks)
 		}
@@ -78,7 +80,7 @@ func chunkTextOnDelimiter(inputText string, delimiter string) []string {
 	return buffer
 }
 
-func chunkTextOnSize(inputText string) []string {
+func chunkTextOnSize(inputText string, overlap int, size int) []string {
 	var chunks []string
 	var buffer []rune
 	var overlapBuffer []rune
@@ -89,18 +91,18 @@ func chunkTextOnSize(inputText string) []string {
 	for _, r := range inputText {
 		if overlapBufferLength > bufferLength {
 			buffer = append(overlapBuffer, buffer...)
-			bufferLength = OverlapSize
+			bufferLength = overlap
 			overlapBuffer = []rune{}
 			overlapBufferLength = 0
 		}
 
-		if bufferLength == ChunkSize {
+		if bufferLength == size {
 			chunks = append(chunks, string(buffer))
-			bufferTail := buffer[len(buffer)-OverlapSize:]
+			bufferTail := buffer[len(buffer)-overlap:]
 			overlapBuffer = append(overlapBuffer, bufferTail...)
 			buffer = []rune{}
 			bufferLength = 0
-			overlapBufferLength = OverlapSize
+			overlapBufferLength = overlap
 		}
 
 		buffer = append(buffer, r)
